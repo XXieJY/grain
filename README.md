@@ -312,8 +312,8 @@ String str = (String) KeyLockManager.lockMethod("111", "222", "TEST1",
 
 
 ## 打版本
-
-	ant
+事实上是使用的maven进行打版本，这里我使用maven最新的3.6是可以通过的。本项目部分是使用junit test在maven构建过程中进行测试，部分模块是使用
+maven 命令直接运行 java main程序的比如rpcclienttest等等。
 	
 	
 ## 推荐环境：
