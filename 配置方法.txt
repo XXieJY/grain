@@ -1,0 +1,5 @@
+1.该项目是一个maven项目，需要手动下载一个maven工具，然后安装maven2eclipse，在eclipse中安装maven。
+2.rpc-clienttest底下的程序是一个带有main函数的java main程序，maven要使用命令才能运行或者调试java main程序。具体命令参考：exec:java -Dexec.mainClass="test.RPCClientTest" 其中引号内的是带有main函数的那个类。
+（记住运行和调试不成功的话尝试先编译看看，命令是mvn compile）
+3.maven还有两个比较重要的命令，一是打包maven项目得到别的项目可以用的jar包，即在maven运行的goal那栏里填写package；如果是测试，则是填写test；注意maven的test命令只会测试那些带有junit的测试装饰器@Test的方法。
+4.如果调试maven java main运行时的时候发现source not found,那说明导入的maven项目不带有.project文件，也就是说这个maven项目只是一个单纯的maven项目并且不被eclipse所支持，因此你需要先将maven项目转为兼容eclipse的项目，使用命令 maven eclipse:eclipse就可以生成.project文件。最后再souce code editor里面将当前调试项目作为project添加进去，就能在动态调试时看到代码了。

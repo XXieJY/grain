@@ -15,7 +15,6 @@ import protobuf.tcp.Test.RPCTestC;
 import protobuf.tcp.Test.RPCTestS;
 
 public class RPCClientTest {
-
 	public static void main(String[] args) throws Exception {
 		GrainLog grainLog = new GrainLog(LoggerFactory.getLogger("minaLog"));
 		GrainLog grainLog1 = new GrainLog(LoggerFactory.getLogger("msgLog"));
